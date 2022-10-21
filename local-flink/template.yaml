@@ -19,8 +19,16 @@ hooks:
   - type: run
     trigger: after-render
     linux:
+      - pwd
+    windows:
+      - cmd /c pwd
+    mac:
+      - pwd
+  - type: run
+    trigger: after-render
+    linux:
       - docker-compose up -d
     windows:
       - cmd /c docker-compose up -d
     mac:
-      - pwd && docker-compose up -d
+      - docker-compose up -d
