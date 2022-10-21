@@ -1,4 +1,4 @@
 type: app
 description: Default stackfile usecase description
 # template used to create the project
-template: flink-and-beam/local-fink
+template: flink-and-beam/local-flink
