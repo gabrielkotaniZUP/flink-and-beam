@@ -23,7 +23,7 @@ hooks:
     windows:
       - cmd /c pwd
     mac:
-      - pwd
+      - ls
   - type: run
     trigger: after-render
     linux:
