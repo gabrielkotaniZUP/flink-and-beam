@@ -11,16 +11,16 @@ hooks:
   - type: run
     trigger: after-render
     linux:
-      - pip install --no-cache-dir -r requirements.txt
+      - echo "getting requirements" && pip install --no-cache-dir -r requirements.txt
     windows:
-      - cmd /c pip install --no-cache-dir -r requirements.txt
+      - cmd /c echo "getting requirements" && pip install --no-cache-dir -r requirements.txt
     mac:
-      - pip install --no-cache-dir -r requirements.txt
+      - echo "getting requirements" && pip install --no-cache-dir -r requirements.txt
   - type: run
     trigger: after-render
     linux:
-      - docker pull apache/beam_flink1.9_job_server
+      - docker compose up -d
     windows:
-      - cmd /c docker pull apache/beam_flink1.9_job_server
+      - cmd /c docker compose up -d
     mac:
-      - docker pull apache/beam_flink1.9_job_server
+      - docker compose up -d
