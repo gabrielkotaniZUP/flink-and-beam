@@ -11,7 +11,7 @@ Use `Python` and other `GUI` tools to facilitate testing, and setup an organized
 
 ## Structure
 + Templates:
-    + [New-Service](###local-flink)
+    + [local-flink](###local-flink)
 + Plugins:
 
 
