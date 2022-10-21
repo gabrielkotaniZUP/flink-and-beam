@@ -1,0 +1,26 @@
+name: local-flink
+description: Run locally on Apache Flink
+types:
+  - app-template
+inputs:
+  - label: Project name
+    type: text
+    name: project_name
+    default: project-name
+hooks:
+  - type: run
+    trigger: after-render
+    linux:
+      - pip install --no-cache-dir -r requirements.txt
+    windows:
+      - cmd /c pip install --no-cache-dir -r requirements.txt
+    mac:
+      - pip install --no-cache-dir -r requirements.txt
+  - type: run
+    trigger: after-render
+    linux:
+      - docker pull apache/beam_flink1.9_job_server
+    windows:
+      - cmd /c docker pull apache/beam_flink1.9_job_server
+    mac:
+      - docker pull apache/beam_flink1.9_job_server
