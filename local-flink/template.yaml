@@ -11,16 +11,16 @@ hooks:
   - type: run
     trigger: after-render
     linux:
-      - echo "getting requirements" && pip install --no-cache-dir -r requirements.txt
+      - pip install --no-cache-dir -r requirements.txt
     windows:
-      - cmd /c echo "getting requirements" && pip install --no-cache-dir -r requirements.txt
+      - cmd /c pip install --no-cache-dir -r requirements.txt
     mac:
-      - echo "getting requirements" && pip install --no-cache-dir -r requirements.txt
+      - pip install --no-cache-dir -r requirements.txt
   - type: run
     trigger: after-render
     linux:
-      - docker compose up -d
+      - docker-compose up -d
     windows:
-      - cmd /c docker compose up -d
+      - cmd /c docker-compose up -d
     mac:
-      - docker compose up -d
+      - pwd && docker-compose up -d
